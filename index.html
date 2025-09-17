@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tipos de Almacenamiento de Datos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6 shadow-md">
+    <h1 class="text-2xl font-bold text-center">Tipos de Almacenamiento de Datos</h1>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6 space-y-12">
+    <!-- Sección Filtro -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4">🔍 Filtro</h2>
+      <input 
+        type="text" 
+        placeholder="Busca un tipo de almacenamiento..." 
+        class="w-full p-2 border rounded-md shadow-sm"
+        oninput="filtrarTarjetas(this.value)" 
+      />
+    </section>
+
+    <!-- Sección Tarjetas -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4">📦 Tarjetas de Almacenamiento</h2>
+      <div id="tarjetas" class="grid md:grid-cols-3 gap-6">
+        <div class="card bg-white p-4 rounded-xl shadow-md" data-nombre="HDD">
+          <h3 class="font-bold text-lg">HDD (Disco Duro)</h3>
+          <p>Almacenamiento magnético, gran capacidad, velocidad media.</p>
+        </div>
+        <div class="card bg-white p-4 rounded-xl shadow-md" data-nombre="SSD">
+          <h3 class="font-bold text-lg">SSD (Unidad de Estado Sólido)</h3>
+          <p>Más rápido, menor consumo, mayor costo por GB.</p>
+        </div>
+        <div class="card bg-white p-4 rounded-xl shadow-md" data-nombre="Nube">
+          <h3 class="font-bold text-lg">Almacenamiento en la Nube</h3>
+          <p>Acceso remoto, escalable, depende de Internet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Tabla Comparativa -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4">📊 Tabla Comparativa</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full border border-gray-300 text-sm">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="p-2 border">Tipo</th>
+              <th class="p-2 border">Velocidad</th>
+              <th class="p-2 border">Capacidad</th>
+              <th class="p-2 border">Costo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-2 border">HDD</td>
+              <td class="p-2 border">Media</td>
+              <td class="p-2 border">Alta</td>
+              <td class="p-2 border">Bajo</td>
+            </tr>
+            <tr>
+              <td class="p-2 border">SSD</td>
+              <td class="p-2 border">Alta</td>
+              <td class="p-2 border">Media</td>
+              <td class="p-2 border">Medio/Alto</td>
+            </tr>
+            <tr>
+              <td class="p-2 border">Nube</td>
+              <td class="p-2 border">Variable</td>
+              <td class="p-2 border">Escalable</td>
+              <td class="p-2 border">Suscripción</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sección Glosario -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4">📖 Glosario</h2>
+      <dl class="space-y-4">
+        <div>
+          <dt class="font-bold">HDD</dt>
+          <dd>Disco duro tradicional que usa platos magnéticos.</dd>
+        </div>
+        <div>
+          <dt class="font-bold">SSD</dt>
+          <dd>Unidad de almacenamiento basada en chips de memoria flash.</dd>
+        </div>
+        <div>
+          <dt class="font-bold">Nube</dt>
+          <dd>Servicio de almacenamiento en servidores remotos accesibles por Internet.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Sección Quiz -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4">📝 Quiz</h2>
+      <p class="mb-2">¿Cuál es el almacenamiento más rápido?</p>
+      <button onclick="verificar('HDD')" class="px-4 py-2 bg-gray-200 rounded-md mr-2
